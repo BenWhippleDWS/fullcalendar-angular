@@ -43,3 +43,5 @@ Thumbs.db
 
 # Outer monorepo
 .turbo
+
+.vscode/settings.json
