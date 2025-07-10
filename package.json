@@ -1,16 +1,20 @@
 {
   "name": "@fullcalendar/angular",
   "version": "6.1.18",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build lib && pnpm run meta",
-    "watch": "ng build lib --watch --configuration development",
-    "test": "ng test lib --watch=false --browsers ChromeHeadless",
-    "test:dev": "ng test lib",
-    "clean": "rm -rf dist .angular/cache",
-    "meta": "mkdir -p dist/lib && cp README.md LICENSE.txt dist/lib",
-    "ci": "pnpm run clean && pnpm run build && pnpm run test"
+  "title": "FullCalendar Angular Component",
+  "description": "The official Angular component for FullCalendar",
+  "keywords": [
+    "calendar",
+    "event",
+    "full-sized",
+    "fullcalendar",
+    "angular"
+  ],
+  "homepage": "https://fullcalendar.io/docs/angular",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullcalendar/fullcalendar-angular.git"
   },
   "dependencies": {
     "tslib": "^2.3.0"
@@ -20,40 +24,16 @@
     "@angular/core": "20",
     "@fullcalendar/core": "~6.1.18"
   },
-  "devDependencies": {
-    "@angular/animations": "~20.0.1",
-    "@angular/cli": "~20.0.1",
-    "@angular/common": "~20.0.1",
-    "@angular/compiler": "~20.0.1",
-    "@angular/compiler-cli": "~20.0.1",
-    "@angular/core": "~20.0.1",
-    "@angular/forms": "~20.0.1",
-    "@angular/platform-browser": "~20.0.1",
-    "@angular/platform-browser-dynamic": "~20.0.1",
-    "@angular/router": "~20.0.1",
-    "@angular-devkit/build-angular": "~20.0.1",
-    "rxjs": "~7.8.0",
-    "typescript": "~5.8.2",
-    "ng-packagr": "^20.0.1",
-    "tslib": "^2.3.0",
-    "@fullcalendar/core": "~6.1.18",
-    "@fullcalendar/daygrid": "~6.1.18",
-    "@fullcalendar/interaction": "~6.1.18",
-    "@fullcalendar/list": "~6.1.18",
-    "@fullcalendar/resource": "~6.1.18",
-    "@fullcalendar/resource-timegrid": "~6.1.18",
-    "@fullcalendar/resource-timeline": "~6.1.18",
-    "@types/jasmine": "~3.10.0",
-    "@types/node": "^22.12.1",
-    "jasmine-core": "~4.0.0",
-    "karma": "~6.3.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.1.0",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "~1.7.0"
+  "module": "fesm2022/fullcalendar-angular.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./fesm2022/fullcalendar-angular.mjs"
+    }
   },
-  "publishConfig": {
-    "directory": "./dist/lib",
-    "linkDirectory": true
-  }
+  "sideEffects": false
 }
