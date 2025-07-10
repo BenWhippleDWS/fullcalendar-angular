@@ -10,6 +10,7 @@ const dummyContainer = typeof document !== 'undefined' ? document.createDocument
 
 @Component({
   selector: 'offscreen-fragment',
+  standalone: false,
   template: '<ng-content></ng-content>',
   encapsulation: ViewEncapsulation.None
 })

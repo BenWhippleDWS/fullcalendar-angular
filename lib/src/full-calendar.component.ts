@@ -20,6 +20,7 @@ import { deepEqual } from './utils/fast-deep-equal';
 
 @Component({
   selector: 'full-calendar',
+  standalone: false,
   templateUrl: './full-calendar.component.html',
   encapsulation: ViewEncapsulation.None // the styles are root-level, not scoped within the component
 })

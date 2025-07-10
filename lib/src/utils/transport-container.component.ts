@@ -15,6 +15,7 @@ const dummyContainer = typeof document !== 'undefined' ? document.createDocument
 
 @Component({
   selector: 'transport-container',
+  standalone: false,
   templateUrl: './transport-container.component.html',
   encapsulation: ViewEncapsulation.None
 })
